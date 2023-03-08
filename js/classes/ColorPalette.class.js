@@ -38,7 +38,18 @@ export default class ColorPalette {
     this.context.fillRect(0, 0, this.canvas.width, this.canvas.height);
   }
   // Méthode de récupération de la couleur sur laquelle l'utilisateur a cliqué
-  getPickedColor() {}
+  getPickedColor() {
+    return this.pickedColor;
+  }
   // Gestionnaire d'évènement de clic sur un pixel de couleur de la palette
-  onClick(event) {}
+  onClick(event) {
+    let rect = this.canvas.getBoundingClientRect();
+    let x = event.clientX - rect.left;
+    let y = event.clientY - rect.top;
+    const [red, green, blue] = this.context.getImageData(x, y, 1, 1).data;
+    this.pickedColor = {red, green, blue};
+
+    const colorPickedEvent = new CustomEvent("color-palette:picked");
+    document.dispatchEvent(colorPickedEvent);
+  }
 }

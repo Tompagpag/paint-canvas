@@ -11,13 +11,14 @@ body {
   width: 80%;
 
   /* presentation */
-  background-color: #ECF0F1;
+  background-color: #282C34;
   font-family: 'Open Sans', sans-serif;
 }
 
 canvas {
   background-color: white;
-  box-shadow: 0 0 8px 1px #2C3E50;
+  box-shadow: 0 0 8px 1px #282C34;
+  border-radius: 10px;
 }
 
 canvas+canvas {
@@ -25,17 +26,26 @@ canvas+canvas {
 }
 
 h1 {
-  color: #E74C3C;
+  color: #53D2FA;
   letter-spacing: 0.1em;
-  text-shadow: 0 0 4px #E79C94;
+  text-shadow: 0 0 4px #ECF0F1;
 }
 
 hr {
-  border-color: #ECF0F1;
+  border-color: #53D2FA;
 }
 
 main {
   margin: 2em 0;
+}
+
+button {
+  padding: 5px 10px;
+  background: #282C34;
+  border: 2px solid #53D2FA;
+  color: #53D2FA;
+  border-radius: 10px;
+  margin-right: 1rem;
 }
 
 
@@ -62,7 +72,6 @@ main {
   position: relative;
   top: 0.5em;
   width: 2em;
-
   /* presentation */
   border-radius: 1em;
 }
@@ -129,6 +138,6 @@ main {
   width: 100px;
 
   /* presentation */
-  color: #2980B9;
+  color: #53D2FA;
   font-weight: bold;
 }
