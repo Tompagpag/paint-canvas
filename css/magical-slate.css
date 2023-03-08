@@ -103,7 +103,7 @@ main {
 /********************** ARDOISE **********************/
 
 .slate {
-  cursor: default;
+  cursor: crosshair;
 }
 
 
